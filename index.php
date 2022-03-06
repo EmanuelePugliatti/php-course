@@ -29,6 +29,20 @@
 				}
 			}
 			
+			
+				$amount = 800;
+				$taxRate = 0.0825;
+				$addedTax = $amount * $taxRate; //amount =800,tax =0.825
+				echo "<h1> the fee is</h1>";
+				echo $addedTax;
+				
+				function tax_calc($amount,$tax){
+					$calculate_tax = $amount*$tax;
+					$amount = round($amount + $calculate_tax,2);
+					return $amount;
+				}
+				echo "<h1> the calculate a fee is </h1>";
+				echo tax_calc(750,0.223);
 		?>
 	</body>
 </html>
